@@ -1,1 +1,1 @@
-# impi
+# ipmi
