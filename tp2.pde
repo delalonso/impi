@@ -70,14 +70,12 @@ posX=300;
 posY=100;
 velocidad=2;
 textAlign(CENTER,CENTER);
-
 }
 
 void draw() {
 contador=frameCount-marcadetiempoimagen;
 
 // ESTADO 1
-
 if(estado==1) {
 background(#45837B);
 noStroke();
@@ -108,7 +106,6 @@ posXText=map(contador,0,300,-500,width/2);
 fill(255);
 text("Miranda! es una de las bandas más importantes del pop argentino. Desde 2001 logró destacarse por su estilo llamativo, sus canciones pegadizas y una identidad única que mezcló humor, drama y mucho ritmo.",posXText-200,80,400,300);
 }
-
 else if(contador<1000) {
 opacidadMapeada=map(contador,900,1000,255,0);
 fill(255,opacidadMapeada);
@@ -121,7 +118,6 @@ estado=2;
 }
 
 // ESTADO 2
-
 if(estado==2) {
 background(#EDBFBF);
 fill(255);
@@ -146,7 +142,6 @@ estado=3;
 }
 
 // ESTADO 3
-
 if(estado==3) {
 background(#F7E275);
 textFont(fuente3);
@@ -203,7 +198,6 @@ estado=6;
 }
 
 // ESTADO 6
-
 if(estado==6){
 background(#F2E8B5);
 image(miImagen6,20,80,360,320);
@@ -213,18 +207,21 @@ textSize(25);
 
 text("Miranda!\n sigue demostrando que el pop argentino puede ser original, divertido y diferente.",390,posYtexto6,250,200);
 if (posYtexto6>90) {
-  posYtexto6=posYtexto6 -1;
+posYtexto6=posYtexto6 -1;
 }
 if (contador>4100){
-  estado=7;
+estado=7;
 }
-//ESTADO 7
+} 
+
+// ESTADO 7
 if (estado==7){
-  background(#45837B);
-  textFont(fuente7);
-  textSize(55);
-  fill(255);
-  text("Gracias por ver!",88,100,500,50);
+background(#45837B);
+textFont(fuente7);
+textSize(55);
+fill(255);
+text("Gracias por ver!",88,100,500,50);
+
 // BOTÓN
 fill(255);
 rect(250,350,140,50);
@@ -234,13 +231,11 @@ textSize(20);
 text("REINICIAR",320,375);
 }
 }
-}
+
 void mousePressed(){
-
 if(estado==7){
-
 if(mouseX > 250 && mouseX < 390 &&
-   mouseY > 350 && mouseY < 400){
+ mouseY > 350 && mouseY < 400){
 
 estado=1;
 contador=0;
@@ -253,7 +248,6 @@ posYtexto6=500;
 posXText = -500;
 posX = 300;
 tamImage = 400;
-
 }
 }
 }
